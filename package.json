@@ -1,0 +1,18 @@
+{
+  "name": "plex-webhooks-demo",
+  "version": "1.0.0",
+  "description": "Demo of using plex-webhooks npm module to setup a Plex webhooks server.",
+  "main": "index.js",
+  "scripts": {
+    "start": "(npm run build) && node dist/index.js",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "config": "^3.3.1",
+    "lnf": "^1.3.9",
+    "plex-webhooks": "^0.1.5"
+  },
+  "author": "",
+  "license": "ISC"
+}
