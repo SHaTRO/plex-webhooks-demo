@@ -9,11 +9,11 @@ const INTRO_DIR: string = config.get('plex.prerolls.intros');
 const INTRO_LINK: string = config.get('plex.prerolls.introLink');
 
 async function handleMediaPlayEvent(payload: any, files: MulterFiles): Promise<void> {
-  console.log('Media play event occurred.');
-  console.log(JSON.stringify(payload));
-  if (false) {
-  await randomSymLink(ADVERT_DIR, ADVERT_LINK);
-  await randomSymLink(INTRO_DIR, INTRO_LINK);
+  console.log(`media.play event encountered ${new Date().toDateString()}`);
+  if (payload.Metadata.librarySectionType === 'movie') {
+    console.log('  library section type is "movie"');
+    await randomSymLink(ADVERT_DIR, ADVERT_LINK);
+    await randomSymLink(INTRO_DIR, INTRO_LINK);
   }
 }
 PlexDispatcher.getInstance().register('media.play', handleMediaPlayEvent);

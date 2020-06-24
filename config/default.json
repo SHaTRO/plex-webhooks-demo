@@ -8,10 +8,10 @@
     "logdir": "/tmp/plex",
     "uploads": "/tmp/plex/uploads",
     "prerolls": {
-      "adverts": "/media/video/prerolls/adverts",
-      "advertLink": "/media/video/prerolls/selected/advert",
-      "intros": "/media/video/prerolls/intros",
-      "introLink": "/media/video/prerolls/selected/intro"
+      "adverts": "/media/video/preroll/adverts",
+      "advertLink": "/media/video/preroll/selected/advert",
+      "intros": "/media/video/preroll/intros",
+      "introLink": "/media/video/preroll/selected/intro"
     }
   }
 }

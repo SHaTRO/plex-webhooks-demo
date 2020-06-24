@@ -1,0 +1,4 @@
+#!/bin/bash
+
+nohup node ./dist/index.js 2>&1 > web.log &
+
