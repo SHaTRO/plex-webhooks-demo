@@ -6,7 +6,15 @@
   "scripts": {
     "start": "(npm run build) && node dist/index.js",
     "build": "tsc",
+    "lint": "eslint *.ts lib --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.42.1",
+    "@typescript-eslint/parser": "^5.42.1",
+    "eslint": "^8.27.0",
+    "eslint-plugin-jest": "^27.1.5",
+    "eslint-plugin-unused-imports": "^2.0.0"
   },
   "dependencies": {
     "config": "^3.3.1",

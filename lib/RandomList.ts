@@ -9,7 +9,7 @@ export type FileList = string[];
 
 export async function getFilesFromDir(dir: string, filterFunc?: (s: string) => boolean): Promise<string[]> {
   const files: (string|undefined)[] = (await fsPromises.readdir(dir)).map( (f) => path.join(dir, f) );
-  const filter: (s: string) => boolean = filterFunc || function(f) { return fs.lstatSync(f).isFile() };
+  const filter: (s: string) => boolean = filterFunc || function(f) { return fs.lstatSync(f).isFile(); };
   return files.filter( (s) => s && filter(s) ) as string[];
 }
 
